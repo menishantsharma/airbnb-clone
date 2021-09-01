@@ -24,17 +24,19 @@ const InfoCard = ({
       </div>
       <div className="flex flex-col flex-grow pl-5">
         <div className="flex justify-between">
-          <p>{location}</p>
-          <HeartIcon className="h-7 cursor-pointer" />
+          <p className="text-sm md:text-lg">{location}</p>
+          <HeartIcon className="h-5 md:h-7 cursor-pointer" />
         </div>
 
-        <h4 className="text-xl">{title}</h4>
+        <h4 className="text-lg md:text-xl">{title}</h4>
         <div className="border-b w-10 pt-2"></div>
-        <p className="pt-2 text-sm text-gray-500 flex-grow">{description}</p>
+        <p className="pt-2 text-xs md:text-sm text-gray-500 flex-grow">
+          {description}
+        </p>
 
-        <div className="flex justify-between items-end pt-5">
+        <div className="flex justify-between items-end md:pt-5">
           <p className="flex items-center">
-            <StarIcon className="h-5 text-red-400" />
+            <StarIcon className="md:h-5 h-3 text-red-400" />
             {star}
           </p>
           <div>
